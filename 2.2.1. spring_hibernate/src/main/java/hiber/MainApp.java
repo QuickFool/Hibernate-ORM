@@ -16,10 +16,10 @@ public class MainApp {
 
       UserService userService = context.getBean(UserService.class);
 
-      Car car1 = new Car("Model1", 123);
-      Car car2 = new Car("Model2", 456);
-      Car car3 = new Car("Model3", 789);
-      Car car4 = new Car("Model4", 101112);
+      Car car1 = new Car("Model1", 1);
+      Car car2 = new Car("Model2", 2);
+      Car car3 = new Car("Model3", 3);
+      Car car4 = new Car("Model4", 4);
       User user1 = new User("User1", "Lastname1", "user1@mail.ru");
       User user2 = new User("User2", "Lastname2", "user2@mail.ru");
       User user3 = new User("User3", "Lastname3", "user3@mail.ru");
@@ -47,6 +47,8 @@ public class MainApp {
          System.out.println("First Name = "+user.getFirstName());
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("Email = "+user.getEmail());
+         System.out.println(user1.getCar().getModel());
+         System.out.println(user2.getCar().getModel());
          System.out.println();
       }
 
