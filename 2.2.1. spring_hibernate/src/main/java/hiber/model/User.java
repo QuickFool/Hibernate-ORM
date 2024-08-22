@@ -19,6 +19,17 @@ public class User {
    @Column(name = "email")
    private String email;
 
+   @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+   private Car car;
+
+   public Car getCar() {
+      return car;
+   }
+
+   public void setCar(Car car) {
+      this.car = car;
+   }
+
    public User() {}
    
    public User(String firstName, String lastName, String email) {
