@@ -10,4 +10,6 @@ public interface UserService {
     List<User> listUsers();
 
     List<Car> listCar();
+
+    User getUserByCarModelAndSeries(String model, int series);
 }

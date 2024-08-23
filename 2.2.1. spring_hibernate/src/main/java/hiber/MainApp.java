@@ -24,8 +24,17 @@ public static void main(String[] args) {
     user5.setCar(new Car("BMW", 555));
     userService.add(user5);
 
-   getUsersWCars(userService);
-    context.close();
+//   getUsersWCars(userService);
+
+   User userWithCar = userService.getUserByCarModelAndSeries("BMW", 555);
+   System.out.println("User with car model BMW and series 555:");
+   System.out.println("Id = " + userWithCar.getId());
+   System.out.println("First Name = " + userWithCar.getFirstName());
+   System.out.println("Last Name = " + userWithCar.getLastName());
+   System.out.println("Email = " + userWithCar.getEmail());
+   System.out.println("Car model = " + userWithCar.getCar().getModel());
+   System.out.println("Car series = " + userWithCar.getCar().getSeries());
+   context.close();
 }
 
    private static void addUsersWOCars(UserService userService) {
